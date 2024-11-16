@@ -3,7 +3,7 @@ import accountService from "../services/accountService.js";
 class AccountController {
   async createAccount(req, res) {
     const accountId = req.params.id;
-    const payload = req.body.url;
+    const payload = req.body;
     try {
       const account = await accountService.createAccount(accountId, payload);
       res.json({ account });
@@ -34,7 +34,7 @@ class AccountController {
 
   async updateAccount(req, res) {
     const accountId = req.params.id;
-    const payload = req.body.url;
+    const payload = req.body;
     try {
       const account = await accountService.updateAccount(accountId, payload);
       res.json({ account });

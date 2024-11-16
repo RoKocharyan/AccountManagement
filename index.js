@@ -3,7 +3,7 @@ import cors from "cors";
 import db from "./models/dbConnection.js"
 import accountRouter from "./routes/accountRoutes.js"
 
-const corsOptions = {origin: "http://localhost:8081"}    
+const corsOptions = {origin: "http://localhost:3000"}    
 const app = express();
 
 app.use(cors(corsOptions));

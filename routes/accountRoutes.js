@@ -1,10 +1,10 @@
 import accountController from "../controllers/accountController.js";
 import express from "express";
-const chatRouter = express.Router();
+const accountRouter = express.Router();
 
-chatRouter.get("/:id", accountController.getAccount);
-chatRouter.post("/:id", accountController.createAccount);
-chatRouter.put("/:id", accountController.updateAccount);
-chatRouter.delete("/:id", accountController.deleteAccount);
+accountRouter.get("/:id", accountController.getAccount);
+accountRouter.post("/:id", accountController.createAccount);
+accountRouter.put("/:id", accountController.updateAccount);
+accountRouter.delete("/:id", accountController.deleteAccount);
 
-export default chatRouter;
+export default accountRouter;
